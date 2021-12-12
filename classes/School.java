@@ -30,7 +30,7 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		{
 			if(students[i] == null)
 			{
-				students[i] = a;
+				students[i] = s;
 				return true;
 			}
 		}
@@ -39,9 +39,9 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 	
 	public boolean removeStudent(Student s)
 	{
-		for(int i=0; i<accounts.length; i++)
+		for(int i=0; i<students.length; i++)
 		{
-			if(accounts[i] == a)
+			if(students[i] == s)
 			{
 				students[i] = null;
 				return true;
@@ -50,20 +50,20 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		return false;
 	}
 	
-	/*public Account searchStudent(String studentID)
+	public Student searchStudent(String studentID)
 	{
 		for(int i=0; i<students.length; i++)
 		{
 			if(students[i] != null)
 			{
-				if(students[i].getAccountNumber().equals(accountNumber))
+				if(students[i].getStudentID().equals(studentID))
 				{
-					return accounts[i];
+					return students[i];
 				}
 			}
 		}
 		return null;
-	}*/
+	}
 	
 	public void showAllStudents()
 	{
@@ -83,7 +83,7 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		{
 			if(teachers[i] == null)
 			{
-				teachers[i] = c;
+				teachers[i] = T;
 				return true;
 			}
 		}
@@ -94,7 +94,7 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 	{
 		for(int i=0; i<teachers.length; i++)
 		{
-			if(teachers[i] == c)
+			if(teachers[i] == T)
 			{
 				teachers[i] = null;
 				return true;
@@ -103,20 +103,20 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		return false;
 	}
 	
-	/*public Customer searchCustomer(int nid)
+	public Teacher searchTeacher(String id)
 	{
-		for(int i=0; i<customers.length; i++)
+		for(int i=0; i < teachers.length; i++)
 		{
-			if(customers[i] != null)
+			if(teachers[i] != null)
 			{
-				if(customers[i].getNid() == nid)
+				if(teachers[i].getEmpId() == id)
 				{
-					return customers[i];
+					return teachers[i];
 				}
 			}
 		}
 		return null;
-	}*/
+	}
 	
 	public void showAllTeachers()
 	{
@@ -188,7 +188,7 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		System.out.println("Address: " + address);
 		System.out.println("//////////////////////////////////");
 		System.out.println("### List of Students ###");
-		this.showAllAccounts();
+		this.showAllStudents();
 		System.out.println("//////////////////////////////////");
 		System.out.println();
 		System.out.println("### List of Teachers ###");

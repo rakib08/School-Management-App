@@ -3,9 +3,19 @@ import java.lang.*;
 
 public class Employee
 {
-	private String empId;
-	private String name;
-	private double salary;
+	protected String empId;
+	protected String name;
+	protected double salary;
+
+	public Employee() {
+	}
+
+	public Employee(String name, String empId, double salary)
+	{
+		this.name = name;
+		this.empId = empId;
+		this.salary = salary;
+	}
 	
 	public void setEmpId(String empId){this.empId = empId;}
 	public void setName(String name){this.name = name;}

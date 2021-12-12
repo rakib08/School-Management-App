@@ -3,7 +3,7 @@ package classes;
 import java.lang.*;
 
 
-public abstract class Student
+public class Student
 {	
 	private String name;
 	private String studentID;
@@ -16,7 +16,7 @@ public abstract class Student
 		this.studentID = studentID;
 		this.dob = dob;  /* dob = Date Of Birth */
 	}
-	public void setName(String Name){ this.name = accountNumber; }
+	public void setName(String name){ this.name = name; }
 	public void setStudentID(String studentID) { this.studentID = studentID; }
 	public void setDOB(String dob) { this.dob = dob;}
 	
@@ -28,8 +28,8 @@ public abstract class Student
 	{
 		
 	}
-	
-	
+
+}
 	
 	
 	
