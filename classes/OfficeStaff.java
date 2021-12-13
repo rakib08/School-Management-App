@@ -3,10 +3,12 @@ import java.lang.*;
 
 public  class OfficeStaff extends Employee
 {
+	String post;
 
-	public OfficeStaff(String name, String empId, double salary)
+	public OfficeStaff(String name, String empId, double salary, String post)
 	{
 		super(name, empId, salary);
+		this.post = post;
 	}
 
 	public void showDetails()
@@ -14,6 +16,7 @@ public  class OfficeStaff extends Employee
 		System.out.println("OfficeStaff ID: " + empId);
 		System.out.println("OfficeStaff Name: " + name);
 		System.out.println("OfficeStaff Salary: " + salary);
+		System.out.println("OfficeStaff Post: " + post);
 		System.out.println();
 	}
 }

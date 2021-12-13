@@ -108,7 +108,7 @@ public class Start {
 								System.out.println("You have selected Search Student");
 								System.out.println("#####################################");
 
-								System.out.print("Enter the ID to search a customer: ");
+								System.out.print("Enter the ID to search a Student: ");
 								String id3 = sc.next();
 
 								Student s3 = school.searchStudent(id3);
@@ -297,13 +297,15 @@ public class Start {
 								String id1 = sc.next();
 								System.out.print("Enter OfficeStaff Salary: ");
 								double salary1 = sc.nextDouble();
+								sc.nextLine();
+								String post1 = sc.nextLine();
 
-								OfficeStaff e1 = new OfficeStaff(name1, id1, salary1);
+								OfficeStaff e1 = new OfficeStaff(name1, id1, salary1, post1);
 
 								if (school.insertOfficeStaff(e1)) {
-									System.out.println("***  Customer Inserted, NID : " + e1.getEmpId() + "  ***");
+									System.out.println("***  OfficeStaff Inserted, NID : " + e1.getEmpId() + "  ***");
 								} else {
-									System.out.println("***  Customer NOT Inserted, NID : " + e1.getEmpId() + "  ***");
+									System.out.println("***  OfficeStaff NOT Inserted, NID : " + e1.getEmpId() + "  ***");
 								}
 
 								break;
