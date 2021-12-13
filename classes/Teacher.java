@@ -6,11 +6,7 @@ public class Teacher extends Employee {
 	private String subject;
 	private String designation;
 
-	public Teacher() {
-	}
-
-	public Teacher(String name, String empId, double salary,String subject, String designation)
-	{
+	public Teacher(String name, String empId, double salary, String subject, String designation) {
 		super(name, empId, salary);
 		this.subject = subject;
 		this.designation = designation;

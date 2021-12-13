@@ -3,13 +3,13 @@ package classes;
 import java.lang.*;
 import interfaces.*;
 
-public class School implements StudentOperations, TeacherOperations, EmployeeOperations
+public class School implements StudentOperations, TeacherOperations, OfficeStaffOperations
 {
 	private String name;
 	private String address;
 	private Student students[] = new Student [2000];
 	private Teacher teachers[] = new Teacher [200];
-	private Employee employees[] = new Employee [50];
+	private OfficeStaff officeStaffs[] = new OfficeStaff [50];
 	
 	public School(){}
 	public School(String name, String address)
@@ -129,54 +129,54 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		}
 	}
 	
-	public boolean insertEmployee(Employee e)
+	public boolean insertOfficeStaff(OfficeStaff e)
 	{
-		for(int i=0; i<employees.length; i++)
+		for(int i=0; i<officeStaffs.length; i++)
 		{
-			if(employees[i] == null)
+			if(officeStaffs[i] == null)
 			{
-				employees[i] = e;
+				officeStaffs[i] = e;
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	public boolean removeEmployee(Employee e)
+	public boolean removeOfficeStaff(OfficeStaff e)
 	{
-		for(int i=0; i<employees.length; i++)
+		for(int i=0; i<officeStaffs.length; i++)
 		{
-			if(employees[i] == e)
+			if(officeStaffs[i] == e)
 			{
-				employees[i] = null;
+				officeStaffs[i] = null;
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	public Employee searchEmployee(String empId)
+	public OfficeStaff searchOfficeStaff(String empId)
 	{
-		for(int i=0; i<employees.length; i++)
+		for(int i=0; i<officeStaffs.length; i++)
 		{
-			if(employees[i] != null)
+			if(officeStaffs[i] != null)
 			{
-				if(employees[i].getEmpId().equals(empId))
+				if(officeStaffs[i].getEmpId().equals(empId))
 				{
-					return employees[i];
+					return officeStaffs[i];
 				}
 			}
 		}
 		return null;
 	}
 	
-	public void showAllEmployees()
+	public void showAllOfficeStaffs()
 	{
-		for(int i=0; i<employees.length; i++)
+		for(int i=0; i<officeStaffs.length; i++)
 		{
-			if(employees[i] != null)
+			if(officeStaffs[i] != null)
 			{
-				employees[i].showDetails();
+				officeStaffs[i].showDetails();
 			}
 		}
 	}
@@ -194,8 +194,8 @@ public class School implements StudentOperations, TeacherOperations, EmployeeOpe
 		System.out.println("### List of Teachers ###");
 		this.showAllTeachers();
 		System.out.println("//////////////////////////////////");
-		System.out.println("### List of Employees ###");
-		this.showAllEmployees();
+		System.out.println("### List of OfficeStaffs ###");
+		this.showAllOfficeStaffs();
 		System.out.println("//////////////////////////////////");
 		
 	}	

@@ -60,6 +60,7 @@ public class Start {
 								System.out.println("#####################################");
 
 								System.out.print("Enter Student Name: ");
+								sc.nextLine();
 								String name1 = sc.nextLine();
 								System.out.print("Enter Student ID: ");
 								String id1 = sc.next();
@@ -174,6 +175,7 @@ public class Start {
 								System.out.println("#####################################");
 
 								System.out.print("Enter Teacher Name: ");
+								sc.nextLine();
 								String name1 = sc.nextLine();
 								System.out.print("Enter Teacher ID: ");
 								String id1 = sc.next();
@@ -182,6 +184,7 @@ public class Start {
 								System.out.print("Enter Teacher Subject: ");
 								String subject1 = sc.next();
 								System.out.print("Enter Teacher Designation: ");
+								sc.nextLine();
 								String designation1 = sc.nextLine();
 
 								Teacher t1 = new Teacher(name1, id1, salary1, subject1, designation1);
@@ -288,6 +291,7 @@ public class Start {
 
 							case 1:
 								System.out.print("Enter OfficeStaff Name: ");
+								sc.nextLine();
 								String name1 = sc.nextLine();
 								System.out.print("Enter OfficeStaff ID: ");
 								String id1 = sc.next();
