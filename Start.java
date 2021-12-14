@@ -297,15 +297,16 @@ public class Start {
 								String id1 = sc.next();
 								System.out.print("Enter OfficeStaff Salary: ");
 								double salary1 = sc.nextDouble();
+								System.out.print("Enter OfficeStaff Post: ");
 								sc.nextLine();
 								String post1 = sc.nextLine();
 
 								OfficeStaff e1 = new OfficeStaff(name1, id1, salary1, post1);
 
 								if (school.insertOfficeStaff(e1)) {
-									System.out.println("***  OfficeStaff Inserted, NID : " + e1.getEmpId() + "  ***");
+									System.out.println("***  OfficeStaff Inserted, ID : " + e1.getEmpId() + "  ***");
 								} else {
-									System.out.println("***  OfficeStaff NOT Inserted, NID : " + e1.getEmpId() + "  ***");
+									System.out.println("***  OfficeStaff NOT Inserted, ID : " + e1.getEmpId() + "  ***");
 								}
 
 								break;

@@ -11,6 +11,14 @@ public  class OfficeStaff extends Employee
 		this.post = post;
 	}
 
+	public void setPost(String post) {
+		this.post = post;
+	}
+
+	public String getPost() {
+		return post;
+	}
+
 	public void showDetails()
 	{
 		System.out.println("OfficeStaff ID: " + empId);
